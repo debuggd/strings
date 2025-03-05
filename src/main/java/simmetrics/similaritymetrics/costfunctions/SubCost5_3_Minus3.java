@@ -40,7 +40,10 @@
 package simmetrics.similaritymetrics.costfunctions;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -74,39 +77,20 @@ public final class SubCost5_3_Minus3 implements InterfaceSubstitutionCost , Seri
 	/**
 	 * approximate charcater set.
 	 */
-	@SuppressWarnings("rawtypes")
-	static private final Set[]	approx;
+	static private final List<Set<Character>>	approx;
 
 	/**
 	 * approximate match = +3, for pairings in {dt} {gj} {lr} {mn} {bpv} {aeiou} {,.}.
 	 */
 	static {
-		approx = new Set[7];
-		approx[0] = new HashSet<>();
-		approx[0].add( 'd' );
-		approx[0].add( 't' );
-		approx[1] = new HashSet<>();
-		approx[1].add( 'g' );
-		approx[1].add( 'j' );
-		approx[2] = new HashSet<>();
-		approx[2].add( 'l' );
-		approx[2].add( 'r' );
-		approx[3] = new HashSet<>();
-		approx[3].add( 'm' );
-		approx[3].add( 'n' );
-		approx[4] = new HashSet<>();
-		approx[4].add( 'b' );
-		approx[4].add( 'p' );
-		approx[4].add( 'v' );
-		approx[5] = new HashSet<>();
-		approx[5].add( 'a' );
-		approx[5].add( 'e' );
-		approx[5].add( 'i' );
-		approx[5].add( 'o' );
-		approx[5].add( 'u' );
-		approx[6] = new HashSet<>();
-		approx[6].add( ',' );
-		approx[6].add( '.' );
+		approx = new ArrayList<>(7);
+		 approx.add(new HashSet<>(Arrays.asList('d', 't')));
+		 approx.add(new HashSet<>(Arrays.asList('g', 'j')));
+		 approx.add(new HashSet<>(Arrays.asList('l', 'r')));
+		 approx.add(new HashSet<>(Arrays.asList('m', 'n')));
+		 approx.add(new HashSet<>(Arrays.asList('b', 'p', 'v')));
+		 approx.add(new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u')));
+		 approx.add(new HashSet<>(Arrays.asList(',', '.')));
 	}
 
 	/**
