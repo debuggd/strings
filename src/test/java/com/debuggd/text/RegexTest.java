@@ -1,7 +1,11 @@
-package com.debuggd.text.regex;
+package com.debuggd.text;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import com.debuggd.text.regex.Regex;
+import com.debuggd.text.regex.RegexMatch;
+import com.debuggd.text.regex.RegexMatches;
 
 class RegexTest {
 

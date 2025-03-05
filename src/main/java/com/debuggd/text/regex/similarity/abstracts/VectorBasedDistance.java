@@ -1,6 +1,5 @@
 package com.debuggd.text.regex.similarity.abstracts;
 
-import com.debuggd.text.regex.similarity.abstracts.SimilarityMetric;
 import com.debuggd.text.regex.tokenizer.Tokenizer;
 import simmetrics.tokenisers.TokenizerWhitespace;
 
